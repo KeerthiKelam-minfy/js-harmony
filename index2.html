@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Harmony - Dating App</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <h1 id="main-heading">JS Harmony</h1>
+    <div id="app-container">
+        <div id="your-matches-list">
+            <div id="matches-container">
+                <h2>Your Matches</h2>
+                <button id="clear-matches-btn">Clear Matches</button>
+            </div>
+
+            <ul id="matches-list">
+                <!-- Matches will be injected here by JS -->
+            </ul>
+        </div>
+
+        <div id="profile-section">
+          
+                <div id="gender-filter">
+                    <label>Show me:</label>
+                    <select id="gender-select">
+                        <option value="any">Anybody</option>
+                        <option value="female">Females</option>
+                        <option value="male">Males</option>
+                    </select>
+                </div>
+       
+            <div id="profile-card-container">
+                <!-- <img src="" alt="profile_pic" id="profile-pic"> -->
+                <!-- will be added by JS -->
+                <!-- <div id="profile-details"> -->
+                <!-- will be added by JS -->
+                <!-- </div> -->
+            </div>
+            <div id="actions">
+                <button id="nope-btn">❌</button>
+                <button id="like-btn">❤️</button>
+            </div>
+        </div>
+
+
+    </div>
+    <div id="overlay" class="hidden"></div>
+    <div id="secret-messenger" class="hidden">
+        <div id="chat-header">
+            Messaging <button id="close-chat" style="float: right;">✖️</button>
+        </div>
+        <form id="message-form">
+            <input type="text" id="message-input" placeholder="Type your message here..." required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

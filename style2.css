@@ -1,0 +1,296 @@
+/* style2.css - Enhanced Dating App UI */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #ffecd2, #fcb69f);
+    margin: 0;
+    padding: 10px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#main-heading {
+    text-align: center;
+    font-size: 3rem;
+    color: #ff4d4f;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#app-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    height: 75vh;
+}
+
+#your-matches-list {
+    width: 250px;
+    background: #fff0f6;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+#your-matches-list h2 {
+    margin-top: 0;
+    color: #c41d7f;
+}
+
+#matches-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#matches-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#matches-list li:hover {
+    background: #ffdeeb;
+}
+
+#matches-list img {
+    border-radius: 50%;
+    border: 2px solid #c41d7f;
+    width: 40px;
+    height: 40px;
+}
+
+#profile-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* <- This is key! */
+    align-items: center;
+    padding: 0px;
+    background: #fff;
+    overflow: hidden;
+}
+
+#gender-filter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    align-self: flex-start;
+    margin-left: 20px;
+}
+
+#profile-card-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent), #ffcad4;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 20px;
+    border: 4px solid white;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.profile-details h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.profile-details p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+#actions {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#actions button {
+    padding: 20px;
+    font-size: 2rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+#nope-btn {
+    background-color: #ff4d4f;
+    color: white;
+}
+
+#like-btn {
+    background-color: #52c41a;
+    color: white;
+}
+
+#actions button:hover {
+    transform: scale(1.1);
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+#secret-messenger {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}
+
+#chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #c41d7f;
+}
+
+#chat-header button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: red;
+}
+
+#message-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#message-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+#message-form button {
+    background-color: #1890ff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#message-form button:hover {
+    background-color: #40a9ff;
+}
+
+.chat-body {
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: #fafafa;
+    margin-bottom: 10px;
+}
+
+#load-more-btn {
+    padding: 10px;
+    margin-left: 20px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+    color: #c41d7f;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#matches-container button:hover {
+    background-color: #fa474a;
+}
+
+#matches-container button {
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: none;
+    background-color:#ff4d4f;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* #gender-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 1rem 0;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+} */
+
+#gender-filter label {
+  font-weight: bold;
+  color: #444;
+}
+
+#gender-select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+}
+
+#gender-select:focus {
+  outline: none;
+  border-color: #007bff;
+}
